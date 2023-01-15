@@ -30,6 +30,15 @@ Options:
 ```
 
 
+## Installation
+
+Via Cargo:
+
+`cargo install resport`
+
+Or [download a release from github](https://github.com/grayfallstown/resport/releases)
+
+
 ## License
 
 MIT or Apache 2
