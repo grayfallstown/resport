@@ -1,0 +1,20 @@
+[package]
+name = "resport"
+description = "CLI tool to tell you the dimensions or aspect ratio of an image, or if it is landscape or portrait"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+image = "0.24.5"
+clap = { version="4.1.1", features=["derive"]}
+
+[profile.release]
+opt-level = "z"
+lto = "fat"
+strip = true
+debug = false
+panic = 'abort'
+incremental = false
+codegen-units = 1
