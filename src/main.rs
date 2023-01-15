@@ -17,7 +17,7 @@ fn gcd(a: u32, b: u32) -> u32 {
 
 
 
-#[derive(Debug, Parser)] // requires `derive` feature
+#[derive(Debug, Parser)]
 #[command(name = "resport")]
 #[command(about = "CLI tool that tells you an images dimensions, aspect-ratio or if it is landscape", long_about = None)]
 struct Cli {
@@ -75,7 +75,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{}x{}", dimensions.0, dimensions.1);
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::Width { image } => {
@@ -85,7 +85,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{}", dimensions.0);
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::Height { image } => {
@@ -95,7 +95,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{}", dimensions.1);
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::AspectRatio { image } => {
@@ -105,7 +105,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{}", aspect_ratio(dimensions.0, dimensions.1));
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::Orientation { image } => {
@@ -119,7 +119,7 @@ fn main() {
                         println!("portrait");
                     }
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::IsLandscape { image } => {
@@ -129,7 +129,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{:?}", dimensions.0 > dimensions.1);
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         },
         Subcommands::IsPortrait { image } => {
@@ -139,7 +139,7 @@ fn main() {
                     let dimensions = image.dimensions();
                     println!("{:?}", dimensions.0 < dimensions.1);
                 }
-                Err(e) => println!("{}", e),
+                Err(e) => println!("{e}")
             }
         }
     }
