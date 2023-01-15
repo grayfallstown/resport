@@ -28,3 +28,8 @@ Commands:
 Options:
   -h, --help  Print help
 ```
+
+
+## License
+
+MIT or Apache 2
