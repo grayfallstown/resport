@@ -4,7 +4,10 @@ description = "CLI tool to tell you the dimensions or aspect ratio of an image, 
 version = "1.0.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+repository = "https://github.com/grayfallstown/resport"
+license = "MIT OR Apache-2.0"
+categories = ["command-line-utilities", "multimedia::images"]
+
 
 [dependencies]
 image = "0.24.5"

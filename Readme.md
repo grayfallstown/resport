@@ -1,15 +1,23 @@
 # resport
 
-CLI tool that tells you an images dimensions, aspect-ratio or if it is landscape. Supports all image formats the [image](https://crates.io/crates/image) crate supports.
+Simple CLI tool that tells you an images dimensions, aspect-ratio or if it is landscape. Supports all image formats the [image](https://crates.io/crates/image) crate supports.
 
 ```
+$ resport orientation -i "..\wallpaper.jpg"
+landscape
+$ resport aspect-ratio -i "..\wallpaper.jpg"
+16:9
+$ resport dimensions -i "..\wallpaper.jpg"
+1920x1080
+
+$ resport
 CLI tool that tells you an images dimensions, aspect-ratio or if it is landscape
 
 Usage: resport.exe <COMMAND>
 
 Commands:
   dimensions    prints 1920x1080
-  widt          prints 1920
+  width         prints 1920
   height        prints 1080
   aspect-ratio  prints 16:9
   orientation   prints landscape
