@@ -11,7 +11,7 @@ categories = ["command-line-utilities", "multimedia::images"]
 
 [dependencies]
 image = "0.25.1"
-clap = { version="4.5.10", features=["derive"]}
+clap = { version="4.5.12", features=["derive"]}
 
 [profile.release]
 opt-level = "z"
