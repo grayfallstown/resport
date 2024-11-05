@@ -10,7 +10,7 @@ categories = ["command-line-utilities", "multimedia::images"]
 
 
 [dependencies]
-image = "0.25.2"
+image = "0.25.5"
 clap = { version="4.5.17", features=["derive"]}
 
 [profile.release]
